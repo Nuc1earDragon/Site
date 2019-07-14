@@ -33,6 +33,7 @@ Game.prototype.death = function(){
             game.context.drawImage(game.bullets[i].image, game.bullets[i].x, game.bullets[i].y);
         }
         showLolText();
+        checkPage(game.restartInterval);
         return;
     },20)
     
@@ -108,9 +109,14 @@ function startGame(){
             }
            , 25);
         }
-/*Game.prototype.gameCreate = function(){
-    game = new Game();
-    map1 = new Map(game);
-    map1.draw(game);
-    game.context.drawImage(game.mainTank.up.main, game.mainTank.x, game.mainTank.y,30,30);
-}*/
+function checkPage( interval ) {
+    if (window.location.pathname != "/tanks"){
+        clearInterval(interval);
+        if('deathAudio' in game){
+            game.deathAudio.pause();
+            }
+            else {};
+        window.removeEventListener('keydown', game.restart);
+    }
+    else return;
+}
