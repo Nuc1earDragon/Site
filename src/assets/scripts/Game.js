@@ -78,6 +78,7 @@ function playDeathMusic(){
   game.deathAudio = new Audio(); 
   game.deathAudio.src = 'assets/death.mp3';
   game.deathAudio.loop = true;
+  game.deathAudio.volume = 0.03;
   game.deathAudio.play();
 }
 function startGame(){
