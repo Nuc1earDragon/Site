@@ -8,3 +8,16 @@ h2 {
     color: white;
     margin: 30px;
 }
+a {
+    border: 1px solid white;
+    margin: 30px;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: Arial;
+    color: white;
+    padding: 15px;
+}
+a:hover {
+    cursor: pointer;
+    background-color: rgb(53, 51, 51);
+}
