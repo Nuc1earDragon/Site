@@ -111,7 +111,7 @@ function startGame(){
            , 25);
         }
 function checkPage( interval ) {
-    if (window.location.pathname != "Site/tanks"){
+    if (window.location.pathname != "/Site/tanks"){
         clearInterval(interval);
         if('deathAudio' in game){
             game.deathAudio.pause();
